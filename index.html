@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASHITOOLS - Hotels</title>
+    <meta name="description" content="Cairo Marriott Hotel & Omar Khayyam Casino, Mashitools">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./css/libs/normalize.css">
+    <link rel="stylesheet" href="./css/libs/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/libs/bootstrap-slider.css">
+    <link rel="stylesheet" href="./css/libs/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="wrap-body">
+        <!-- ------------------------------- Header -------------------------------- -->
+
+        <header>
+            <nav class="main-navbar py-2 mb-3 mt-2">
+                <div class="container">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5">
+                            <div class="m-navbar-logo">
+                                <a href="index.html" class="d-flex align-items-center">
+                                    <img src="assets/img/big-size.png" alt="logo mashitools" class="m-navbar-logo-img"
+                                        width="75">
+                                    <h3 class="m-navbar-text ms-1 my-0">MASHITOOLS</h3>
+                                </a>
+                                <div class="toggle-btn"><i class="mdi mdi-menu"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-19">
+
+                            <div class="m-navbar-links text-end">
+                                <a href="#" class="m-n-links-item">
+                                    Holidays
+                                </a>
+                                <a href="#" class="m-n-links-item">
+                                    Car hire
+                                </a>
+                                <a href="#" class="m-n-links-item">
+                                    Flights
+                                </a>
+                                <a href="#" class="m-n-links-item active">
+                                    Hotels
+                                </a>
+                                <a href="#" class="m-n-links-item">
+                                    Travel insurance
+                                </a>
+                                <a href="#" class="m-n-links-item">
+                                    More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ---------------------------- advertisement ---------------------------- -->
+
+        <main class="main-adv">
+            <div class="container">
+                <div class="text-center">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/main-adv.jpg" alt="advertisement" class="adv-img">
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- ------------------------------- content ------------------------------- -->
+
+        <div class="wrap-content">
+            <div class="px-3">
+                <div class="row">
+                    <!-- ------------------------- products and filter ------------------------- -->
+                    <div class="col-lg-20">
+                        <div class="border-top">
+                            <div class="row gy-3">
+                                <!-- Filter -->
+                                <div class="col-md-6 pt-4 pt-md-5">
+                                    <div class="search-sidebar">
+                                        <!-- ---------------------------- hotel search ----------------------------- -->
+                                        <div class="hotel-search border rounded p-2 mb-4">
+                                            <h4 class="mt-0">Search Hotels</h4>
+                                            <form class="hotel-search-form">
+                                                <div class="form-group mb-2">
+                                                    <label for="whereID" class="mb-1 d-block">Where ?</label>
+                                                    <div class="form-input-group with-two-icons">
+                                                        <i class="mdi mdi-magnify cursor-pointer"></i>
+                                                        <input type="text" id="whereID" class="form-control search-form"
+                                                            name="locationSearch" value="Cairo, Egypt">
+                                                        <i
+                                                            class="mdi mdi-menu-down mdi-36px mn-arrow cursor-pointer"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-2">
+                                                    <label for="checkinID" class="mb-1 d-block">Check in</label>
+                                                    <div class="row gx-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <i
+                                                                class="mdi mdi-calendar-month-outline mdi-36px text-success"></i>
+                                                        </div>
+                                                        <div class="col-19">
+                                                            <div class="form-input-group">
+                                                                <input type="text" id="checkinID"
+                                                                    class="form-control date-form" name="checkinSearch"
+                                                                    value="Thu 18/11">
+                                                                <i
+                                                                    class="mdi mdi-menu-down mdi-36px mn-arrow cursor-pointer"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-2">
+                                                    <label for="checkoutID" class="mb-1 d-block">Check out</label>
+                                                    <div class="row gx-4 align-items-center">
+                                                        <div class="col-5">
+                                                            <i
+                                                                class="mdi mdi-calendar-month-outline mdi-36px text-orange"></i>
+                                                        </div>
+                                                        <div class="col-19">
+                                                            <div class="form-input-group">
+                                                                <input type="text" id="checkoutID"
+                                                                    class="form-control date-form" name="checkoutSearch"
+                                                                    value="Fri 19/11">
+                                                                <i
+                                                                    class="mdi mdi-menu-down mdi-36px mn-arrow cursor-pointer"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group mb-2">
+                                                    <label for="membersID" class="mb-1 d-block">Rooms and guests</label>
+                                                    <div class="form-input-group">
+                                                        <input type="text" id="membersID" class="form-control"
+                                                            name="membersSearch" value="1 room, 2 guests">
+                                                        <i class="mdi mdi-menu-down mdi-36px mn-arrow"></i>
+                                                    </div>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn mt-3 w-100 py-3 rounded border fw-bold search-btn">Search</button>
+                                            </form>
+                                        </div>
+                                        <!-- ---------------------------- refine search ---------------------------- -->
+                                        <div class="refine-search">
+                                            <h4 class="mt-0">Refine Your Search</h4>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="star-rating">
+                                                    <span>Star Ratings</span>
+                                                    <i class="mdi mdi-menu-up mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu star-rating">
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <div class="menu-item d-flex align-items-center">
+                                                        <div class="menu-item-start flex-grow-1">
+                                                            <i
+                                                                class="mdi mdi-checkbox-marked-circle-outline me-1 text-warning"></i>
+                                                            <div class="rating-wrap d-inline-block">
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-item-end flex-shrink-0 ms-1">
+                                                            <span>65</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-item d-flex align-items-center">
+                                                        <div class="menu-item-start flex-grow-1">
+                                                            <i
+                                                                class="mdi mdi-checkbox-marked-circle-outline me-1 text-warning"></i>
+                                                            <div class="rating-wrap d-inline-block">
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-item-end flex-shrink-0 ms-1">
+                                                            <span>14</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-item d-flex align-items-center">
+                                                        <div class="menu-item-start flex-grow-1">
+                                                            <i
+                                                                class="mdi mdi-checkbox-marked-circle-outline me-1 text-warning"></i>
+                                                            <div class="rating-wrap d-inline-block">
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-item-end flex-shrink-0 ms-1">
+                                                            <span>73</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-item d-flex align-items-center">
+                                                        <div class="menu-item-start flex-grow-1">
+                                                            <i
+                                                                class="mdi mdi-checkbox-marked-circle-outline me-1 text-warning"></i>
+                                                            <div class="rating-wrap d-inline-block">
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-gray"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-item-end flex-shrink-0 ms-1">
+                                                            <span>100</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-item d-flex align-items-center">
+                                                        <div class="menu-item-start flex-grow-1">
+                                                            <i
+                                                                class="mdi mdi-checkbox-marked-circle-outline me-1 text-warning"></i>
+                                                            <div class="rating-wrap d-inline-block">
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-item-end flex-shrink-0 ms-1">
+                                                            <span>200</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="price-filter">
+                                                    <span>Price</span>
+                                                    <i class="mdi mdi-menu-up mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu price-filter">
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <div class="range-wrap mx-auto">
+                                                        <span class="img">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                                                height="100%" viewBox="0 0 292 116">
+                                                                <rect id="Rectangle_126" data-name="Rectangle 126"
+                                                                    width="32" height="78" transform="translate(0 38)"
+                                                                    fill="#ffbc00" />
+                                                                <path id="Path_130" data-name="Path 130"
+                                                                    d="M0,0H31V58H0Z" transform="translate(32.302 58)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_128" data-name="Rectangle 128"
+                                                                    width="31" height="34" transform="translate(52 82)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_129" data-name="Rectangle 129"
+                                                                    width="32" height="24" transform="translate(78 92)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_130" data-name="Rectangle 130"
+                                                                    width="32" height="15"
+                                                                    transform="translate(104 101)" fill="#ffbc00" />
+                                                                <rect id="Rectangle_131" data-name="Rectangle 131"
+                                                                    width="31" height="8" transform="translate(130 108)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_132" data-name="Rectangle 132"
+                                                                    width="32" height="8" transform="translate(155 108)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_133" data-name="Rectangle 133"
+                                                                    width="32" height="21" transform="translate(181 95)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_134" data-name="Rectangle 134"
+                                                                    width="31" height="34" transform="translate(208 82)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_135" data-name="Rectangle 135"
+                                                                    width="32" height="109" transform="translate(228 7)"
+                                                                    fill="#ffbc00" />
+                                                                <rect id="Rectangle_136" data-name="Rectangle 136"
+                                                                    width="32" height="116" transform="translate(260)"
+                                                                    fill="#ffbc00" />
+                                                            </svg>
+
+                                                        </span>
+                                                        <input class="bar" type="text">
+
+                                                        <span class="input-number">5-10</span>
+
+                                                    </div>
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <div class="text-center mt-5">
+                                                        <button
+                                                            class="btn texes-fees-btn d-flex align-items-center mx-auto border rounded">
+                                                            <span>Total stay + taxes&fees</span>
+                                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="location-filter">
+                                                    <span>Location</span>
+                                                    <i class="mdi mdi-menu-up mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu location-filter">
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <div class="dropdown-wrap mb-3">
+                                                        <button
+                                                            class="dropdown-toggle-btn d-flex align-items-center border rounded btn mx-auto"
+                                                            data-dropdown-distination="location-dropdown">
+                                                            <span>Any Distance</span>
+                                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu location-dropdown">
+                                                            <li class="dropdown-menu-item">
+                                                                Cairo
+                                                            </li>
+                                                            <li class="dropdown-menu-item">
+                                                                Cairo
+                                                            </li>
+                                                            <li class="dropdown-menu-item">
+                                                                Cairo
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <form class="text-center mt-2">
+                                                        <div class="form-group mb-2">
+                                                            <div class="form-input-group mx-auto with-two-icons">
+                                                                <i class="mdi mdi-magnify cursor-pointer"></i>
+                                                                <input type="text" class="form-control search-form"
+                                                                    name="locationSearch" value="Cairo (city center)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group text-start mt-3">
+                                                            <input type="checkbox" name="starRatings" id="starRatingId"
+                                                                class="form-check me-1">
+                                                            <label for="starRatingId" class="d-inline-block">Star
+                                                                Ratings</label>
+                                                        </div>
+                                                    </form>
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="property-name-filter">
+                                                    <span>Property Name</span>
+                                                    <i class="mdi mdi-menu-up mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu property-name-filter">
+
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <form class="text-center">
+
+                                                        <div class="form-input-group mx-auto with-two-icons">
+                                                            <i class="mdi mdi-magnify cursor-pointer"></i>
+                                                            <input type="text" class="form-control search-form"
+                                                                name="locationSearch" value="Property Name">
+                                                        </div>
+
+
+                                                    </form>
+                                                    <!-- ----------------------------------------------------------------------- -->
+
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="guest-ratings-filter">
+                                                    <span>Guest Ratings</span>
+                                                    <i class="mdi mdi-menu-up mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu guest-ratings-filter">
+
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    <div class="buttons-group">
+                                                        <button class="btn border">
+                                                            +2
+                                                        </button>
+                                                        <button class="btn border">
+                                                            +4
+                                                        </button>
+                                                        <button class="btn border">
+                                                            +6
+                                                        </button>
+                                                        <button class="btn border">
+                                                            +8
+                                                        </button>
+                                                        <button class="btn border">
+                                                            +10
+                                                        </button>
+                                                        <button class="btn border">
+                                                            +12
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="hotel-features-filter">
+                                                    <span>Hotel Features</span>
+                                                    <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu hotel-features-filter hide">
+
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    empty
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="collapse-wrap">
+                                                <button class="btn collapse-toggle-btn mb-2 d-flex align-items-center"
+                                                    data-collapse-distnation="other-filter">
+                                                    <span>Other</span>
+                                                    <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                                </button>
+                                                <div class="collapse-menu other-filter hide">
+
+                                                    <!-- ----------------------------------------------------------------------- -->
+                                                    empty
+
+
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <button type="reset" class="btn mt-3 border rounded w-100 py-3">Reset All
+                                                Filters</button>
+                                        </div>
+                                        <!-- ---------------------------- map location ----------------------------- -->
+                                        <div class="mt-5">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.0219742177437!2d55.17613071508543!3d25.101117483940904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b76fd3647cb%3A0x2dc47f0648d9e825!2sAl%20Fahad%20Tower%202!5e0!3m2!1sen!2seg!4v1636890142168!5m2!1sen!2seg"
+                                                width="100%" height="250" style="border:2px solid black;"
+                                                loading="lazy"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Products -->
+                                <div class="col-md-18 pt-md-5 pt-2">
+                                    <!-- ----------------------------------------------------------------------- -->
+                                    <div class="py-2 border rounded px-3 mb-3">
+                                        <p class="m-0">
+                                            How payments to us affect ranking. <a href="#" class="text-info fw-500">More
+                                                info.</a>
+                                        </p>
+                                    </div>
+                                    <!-- ----------------------------------------------------------------------- -->
+                                    <div class="d-flex mb-3">
+                                        <div class="flex-grow-1">
+                                            <div class="mb-1">
+                                                <h3 class="my-0 d-inline-block">Cairo</h3>
+                                                <small class="text-darkenGray">301 properties</small>
+                                            </div>
+                                            <p class="mt-1 mb-2 fw-500">
+                                                1 night (18 Nov - 19 Nov ) for 2 adults | <a href="#"
+                                                    class="text-info underline ms-2">Change search</a>
+                                            </p>
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <a href="#" class="btn map-btn border">Open Map</a>
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------------------------------------------------- -->
+                                    <article class="mb-3">
+                                        <h5 class="m-0 mb-1">Short By</h5>
+                                        <p class="m-0 header-features">
+                                            <a href="#" class="text-info me-1">
+                                                <i class="mdi mdi-checkbox-marked-circle-outline me-1"></i>
+                                                Recommended
+                                            </a>
+                                            |
+
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-n1" width="17px"
+                                                    height="17px" viewBox="0 0 25.344 28.115">
+                                                    <g id="Group_54" data-name="Group 54"
+                                                        transform="translate(-742.414 -570.791)">
+                                                        <path id="Path_52" data-name="Path 52"
+                                                            d="M917.468,708.056h-.017a.462.462,0,0,1,0-.369.034.034,0,0,1,.016,0Z"
+                                                            transform="translate(-149.709 -116.837)" fill="#938f8f" />
+                                                        <path id="Path_53" data-name="Path 53"
+                                                            d="M767.742,644.794q0,.184,0,.369a10.3,10.3,0,0,1-.062,1.161,7.152,7.152,0,0,1-1.051,3.233,5.4,5.4,0,0,1-1.743,1.662,9.215,9.215,0,0,1-2.729,1.053c-.552.129-1.11.226-1.671.3-.46.061-.922.105-1.384.143-1.759.144-3.521.143-5.283.128-.291,0-.582-.01-.872-.015-.039-.017-.08,0-.12-.012-.1,0-.2-.006-.294-.01-.265-.012-.531-.024-.8-.039-.287-.016-.574-.026-.859-.057-.534-.058-1.07-.107-1.6-.193a16.25,16.25,0,0,1-1.925-.414,9.162,9.162,0,0,1-1.154-.4,6.784,6.784,0,0,1-1.481-.862,5.358,5.358,0,0,1-.576-.51,5.547,5.547,0,0,1-.82-1.116,6.683,6.683,0,0,1-.67-1.81,9.775,9.775,0,0,1-.181-1.165,12.725,12.725,0,0,1-.048-1.727,6.9,6.9,0,0,1,.11-.945,10.449,10.449,0,0,1,.437-1.684q.181-.515.405-1.012c.142-.316.293-.627.46-.929a11.923,11.923,0,0,1,.78-1.258c.086-.118.167-.24.25-.36.234-.3.468-.6.717-.892a13.783,13.783,0,0,1,1.242-1.269,11.576,11.576,0,0,1,1.814-1.342,9.435,9.435,0,0,1,.947-.493.15.15,0,0,1,.163.009,9.281,9.281,0,0,0,2.857,1.208,7.906,7.906,0,0,0,2.131.214,8.144,8.144,0,0,0,2.931-.676,9.316,9.316,0,0,0,1.847-1.065.09.09,0,0,1,.1-.013,13.569,13.569,0,0,1,3.063,1.78,14.469,14.469,0,0,1,1.717,1.539,13.077,13.077,0,0,1,2.3,3.282,10.437,10.437,0,0,1,.88,2.616A8.46,8.46,0,0,1,767.742,644.794Z"
+                                                            transform="translate(0 -53.943)" fill="#060706" />
+                                                        <path id="Path_54" data-name="Path 54"
+                                                            d="M787.9,593.259a5.572,5.572,0,0,0,1.03.582,2.77,2.77,0,0,0,1.233.234,2.45,2.45,0,0,0,1.51-.645,8.574,8.574,0,0,1,.674-.59.749.749,0,0,1,.386-.187.613.613,0,0,1,.427.218,5.137,5.137,0,0,1,.495.543,1.729,1.729,0,0,0,1.544.6,2.525,2.525,0,0,0,1.429-.632c.711-.619,1.447-1.208,2.17-1.813.275-.23.543-.469.8-.728.02.046-.008.077-.022.109a6.9,6.9,0,0,1-.711,1.224,6.7,6.7,0,0,0-1.1,2.61,5.814,5.814,0,0,0-.09,1.367.143.143,0,0,1-.068.14,7.639,7.639,0,0,1-2.234,1.121,6.735,6.735,0,0,1-2.379.3,7.148,7.148,0,0,1-2.465-.587,8.473,8.473,0,0,1-1.016-.521.2.2,0,0,1-.106-.179,5.3,5.3,0,0,0-.352-1.361,6.121,6.121,0,0,0-1.075-1.72Z"
+                                                            transform="translate(-38.909 -17.114)" fill="#060606" />
+                                                        <path id="Path_55" data-name="Path 55"
+                                                            d="M783.538,572.727a10.15,10.15,0,0,0,1.083-.073,1.407,1.407,0,0,0,.993-.64,3.207,3.207,0,0,1,.909-.926,1.688,1.688,0,0,1,1.741-.1,5.173,5.173,0,0,1,1.465,1.165.761.761,0,0,0,.406.228,1.753,1.753,0,0,0,.594-.005c.489-.07.961-.225,1.447-.309a2.26,2.26,0,0,1,1.232.03c.259.1.242.07.088.29a4.729,4.729,0,0,1-.73.766c-.7.637-1.46,1.211-2.184,1.825a5.185,5.185,0,0,1-.61.5,1.363,1.363,0,0,1-.55.212.649.649,0,0,1-.63-.267,3.3,3.3,0,0,0-.935-.872,1.508,1.508,0,0,0-1.393-.091,3.336,3.336,0,0,0-.943.639c-.147.131-.283.276-.438.4a1.237,1.237,0,0,1-1.174.194,3.377,3.377,0,0,1-1.333-.824,7.4,7.4,0,0,1-1.291-1.634c-.028-.047-.034-.066.02-.1a2.322,2.322,0,0,1,.879-.321A6.711,6.711,0,0,1,783.538,572.727Z"
+                                                            transform="translate(-33.236)" fill="#060606" />
+                                                        <path id="Path_56" data-name="Path 56"
+                                                            d="M865.14,618.085a.867.867,0,0,0,.265.041,5.317,5.317,0,0,1,2.748,1.169,3.341,3.341,0,0,1,.581.564.568.568,0,0,1,.058.623.582.582,0,0,1-.525.346c-.077,0-.112-.051-.157-.091-.391-.354-.8-.684-1.224-1a15.228,15.228,0,0,0-2.5-1.5c-.178-.085-.356-.17-.536-.25a.107.107,0,0,1-.075-.114c0-.141,0-.282,0-.423a.092.092,0,0,1,.05-.093,6.453,6.453,0,0,1,2.022-.751,4.65,4.65,0,0,1,2.646.309,6.423,6.423,0,0,1,.629.3.61.61,0,0,1-.142,1.141.554.554,0,0,1-.4-.058,4.47,4.47,0,0,0-1.054-.423A3.806,3.806,0,0,0,865.14,618.085Z"
+                                                            transform="translate(-103.823 -39.047)" fill="#060606" />
+                                                        <path id="Path_57" data-name="Path 57"
+                                                            d="M814.471,762.432a.346.346,0,0,1,.12.012C814.55,762.442,814.509,762.457,814.471,762.432Z"
+                                                            transform="translate(-61.644 -163.559)" fill="#fefdfd" />
+                                                        <path id="Path_58" data-name="Path 58"
+                                                            d="M808.878,658.982c0,.186,0,.372,0,.559,0,.063.023.083.077.094a2.733,2.733,0,0,1,1.3.621,2.827,2.827,0,0,1,.689.95,5.524,5.524,0,0,1,.335.969c.019.076,0,.078-.063.078-.307,0-.614,0-.921,0-.075,0-.094-.028-.109-.093a2.226,2.226,0,0,0-.335-.772,1.614,1.614,0,0,0-1.083-.687,2.432,2.432,0,0,0-1.314.11,1.357,1.357,0,0,0-.9,1.122,1.533,1.533,0,0,0,.085.891,1.417,1.417,0,0,0,.759.7,9.728,9.728,0,0,0,1.563.486,5.914,5.914,0,0,1,1.616.631,2.124,2.124,0,0,1,1.053,1.667,2.863,2.863,0,0,1-.441,1.954,2.817,2.817,0,0,1-1.319,1.028,3.111,3.111,0,0,1-.919.232c-.066.005-.074.037-.073.094,0,.289,0,.578,0,.867,0,.06-.01.082-.076.081q-.47-.006-.94,0c-.065,0-.077-.02-.076-.08,0-.292,0-.584,0-.876,0-.059-.014-.079-.075-.092a3.635,3.635,0,0,1-1.307-.537,2.911,2.911,0,0,1-1.147-1.589,4.159,4.159,0,0,1-.175-.919c0-.05,0-.073.057-.073q.479,0,.959,0c.074,0,.07.04.073.091a2.1,2.1,0,0,0,.606,1.413,1.9,1.9,0,0,0,1.191.557,3.209,3.209,0,0,0,1.427-.133,1.388,1.388,0,0,0,.974-1.247,1.77,1.77,0,0,0-.107-.941,1.555,1.555,0,0,0-.852-.775,9.528,9.528,0,0,0-1.55-.466,6.51,6.51,0,0,1-1.315-.45,2.042,2.042,0,0,1-1.2-1.66,2.747,2.747,0,0,1,2-3.13,1.967,1.967,0,0,1,.357-.081c.059-.007.088-.026.086-.1-.006-.347,0-.693,0-1.04,0-.083.023-.1.1-.1q.451.007.9,0c.077,0,.094.023.092.1C808.875,658.616,808.878,658.8,808.878,658.982Z"
+                                                            transform="translate(-53.613 -74.717)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                Price
+                                            </span>
+                                            |
+
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-n2 mx-1" width="27px"
+                                                    height="22px" viewBox="0 0 49.072 29.058">
+                                                    <g id="Group_55" data-name="Group 55"
+                                                        transform="translate(543.35 -708.537)">
+                                                        <path id="Path_59" data-name="Path 59"
+                                                            d="M-453.941,737.594c-.1-.122-.034-.247-.013-.365.553-3.207,1.1-6.414,1.673-9.618a.833.833,0,0,0-.272-.856c-2.28-2.193-4.544-4.4-6.817-6.605-.142-.138-.313-.246-.59-.46a14.894,14.894,0,0,1,2.334-.408q3.989-.6,7.984-1.168a.707.707,0,0,0,.582-.481q2.107-4.281,4.227-8.555c.088-.178.18-.355.274-.54.242.077.257.305.338.469,1.408,2.832,2.816,5.664,4.2,8.509a1.022,1.022,0,0,0,.893.637c3.132.436,6.259.9,9.388,1.357.16.023.316.069.478.1.022.264-.2.346-.329.473q-3.416,3.334-6.85,6.65a.875.875,0,0,0-.29.9c.574,3.2,1.121,6.411,1.675,9.617.018.1.019.211.029.323-.266.049-.431-.121-.614-.217-2.772-1.445-5.547-2.886-8.306-4.356a1.019,1.019,0,0,0-1.094-.01c-2.777,1.475-5.568,2.925-8.355,4.38A1.038,1.038,0,0,1-453.941,737.594Z"
+                                                            transform="translate(-74.269 0)" fill="#040505" />
+                                                        <path id="Path_60" data-name="Path 60"
+                                                            d="M-233.072,719.049l-3.656-.527c-1.1-.159-2.193-.333-3.292-.471a.746.746,0,0,1-.64-.488c-.94-1.927-1.9-3.847-2.846-5.769-.086-.174-.179-.344-.314-.6-.342.684-.648,1.3-.954,1.91-.47.943-.952,1.881-1.4,2.834-.16.339-.36.262-.547.1s-.732-.07-.479-.584q1.639-3.325,3.289-6.644c.014-.027.055-.041.093-.068.2.1.227.309.31.477,1.2,2.428,2.4,4.855,3.577,7.293a.837.837,0,0,0,.732.52c2.806.4,5.61.812,8.414,1.222.066.01.13.031.206.049-.058.242-.248.338-.383.47-1.928,1.877-3.853,3.757-5.8,5.614a.927.927,0,0,0-.307.95c.481,2.683.943,5.37,1.4,8.057.025.144.167.335-.016.443-.133.079-.265-.077-.389-.142-2.289-1.192-4.566-2.406-6.868-3.571-.576-.291-.2-.55-.105-.856.133-.41.347-.341.653-.177,1.568.844,3.147,1.669,4.722,2.5l.514.269a1.8,1.8,0,0,0-.065-.778c-.345-2.08-.688-4.16-1.063-6.234a.788.788,0,0,1,.271-.805c1.542-1.492,3.07-3,4.6-4.5.128-.125.269-.238.4-.356Z"
+                                                            transform="translate(-263.697 -0.18)" fill="#050605" />
+                                                        <path id="Path_61" data-name="Path 61"
+                                                            d="M-543.266,718.353c1.484-.22,2.968-.444,4.452-.66,1.4-.2,2.8-.416,4.211-.594a.781.781,0,0,0,.675-.516c1.182-2.436,2.382-4.864,3.577-7.293.079-.161.166-.319.242-.466.208-.01.214.152.264.252,1.05,2.116,2.079,4.243,3.151,6.348.293.574-.215.517-.436.692-.3.234-.448.113-.6-.2-.664-1.374-1.353-2.737-2.037-4.1-.079-.158-.113-.349-.321-.47l-1.665,3.361c-.476.961-.97,1.913-1.418,2.886a.872.872,0,0,1-.774.553c-2.142.29-4.281.6-6.421.911-.141.02-.28.059-.425.091.006.238.193.317.311.433q2.312,2.277,4.639,4.539a.789.789,0,0,1,.27.805c-.374,2.075-.715,4.155-1.066,6.234-.039.23-.07.461-.1.7.232.072.362-.089.509-.165,1.61-.843,3.22-1.686,4.818-2.55.321-.174.5-.145.6.206.078.277.51.538-.054.826-2.33,1.191-4.643,2.415-6.964,3.624-.108.056-.22.188-.342.119-.171-.1-.045-.265-.023-.392.459-2.687.916-5.375,1.4-8.056a1.012,1.012,0,0,0-.339-1.042c-1.934-1.844-3.844-3.714-5.765-5.571a5.659,5.659,0,0,0-.453-.359Z"
+                                                            transform="translate(0 -0.255)" fill="#050605" />
+                                                    </g>
+                                                </svg>
+                                                Stars
+                                            </span>
+                                            |
+
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-n2 mx-1" width="22px"
+                                                    height="22px" viewBox="0 0 33.277 32.62">
+                                                    <g id="Group_58" data-name="Group 58"
+                                                        transform="translate(1386.266 -1087.05)">
+                                                        <path id="Path_78" data-name="Path 78"
+                                                            d="M-1325.831,1127.893c1.567-1.549,3.469-2.879,3.541-5.384.023-.8.556-.889,1.2-.662a2.083,2.083,0,0,1,1.165,2.62c-.178.72-.422,1.425-.649,2.176a11.623,11.623,0,0,0,2.439-.036c1.595-.078,2.182.536,1.97,2.065q-.284,2.055-.629,4.1c-.362,2.133-1.592,3.1-3.832,2.887-1.666-.157-3.318-.461-4.976-.7-1.215-.346-1.259-1.25-1.181-2.266a20.121,20.121,0,0,0,0-2.458C-1326.817,1129.3-1326.819,1128.413-1325.831,1127.893Z"
+                                                            transform="translate(-45.741 -26.84)" />
+                                                        <path id="Path_79" data-name="Path 79"
+                                                            d="M-1343.442,1148.03c.018,1.874.115,3.748-.051,5.62l-.146.121.149-.117.023.438c-.8.246-1.76-.4-2.469.406h-.44a3.881,3.881,0,0,1-.273-1.191c.028-2.279.028-4.559.038-6.839a7.954,7.954,0,0,1,2.976.083.079.079,0,0,0,.068.108c.281.351.124.75.127,1.131l-.256.119Z"
+                                                            transform="translate(-30.474 -45.9)" />
+                                                        <path id="Path_80" data-name="Path 80"
+                                                            d="M-1327.526,1091.527c.45-.787.181-1.455-.664-1.963a.458.458,0,0,1-.264-.562.546.546,0,0,1,.578-.274c.884.025,1.549-.216,1.738-1.187.046-.234.186-.528.529-.487.266.032.359.28.405.492a1.5,1.5,0,0,0,1.712,1.235c.216,0,.481-.006.581.26a.451.451,0,0,1-.265.558,1.422,1.422,0,0,0-.715,2.041.5.5,0,0,1-.08.624c-.227.2-.455.05-.614-.088a1.46,1.46,0,0,0-2.189-.05.521.521,0,0,1-.629.114C-1327.649,1092.093-1327.586,1091.856-1327.526,1091.527Z"
+                                                            transform="translate(-44.447)" fill="#2d3280" />
+                                                        <path id="Path_81" data-name="Path 81"
+                                                            d="M-1364.962,1191.546c.651.252,1.013-.1,1.308-.665.147-.28.264-.724.667-.672.476.06.461.555.5.9a1.083,1.083,0,0,0,1.1,1.046c.312.038.779.054.851.443s-.357.537-.652.667a1.155,1.155,0,0,0-.767,1.515c.075.279.17.62-.164.81-.358.2-.582-.114-.763-.316a1.276,1.276,0,0,0-1.8-.306c-.227.131-.533.382-.829.085-.334-.336-.026-.661.122-.907a1.085,1.085,0,0,0-.214-1.566c-.234-.21-.612-.469-.441-.832C-1365.824,1191.3-1365.365,1191.552-1364.962,1191.546Z"
+                                                            transform="translate(-15.529 -79.819)" fill="#2d3280" />
+                                                        <path id="Path_82" data-name="Path 82"
+                                                            d="M-1281.741,1191.615c.386-.849-.085-1.411-.965-1.794-.2-.089-.411-.235-.369-.5a.481.481,0,0,1,.509-.375c1.045-.007,1.466-.6,1.575-1.521.028-.235.14-.471.384-.5a.523.523,0,0,1,.5.4,1.424,1.424,0,0,0,1.949.98.491.491,0,0,1,.6.222c.122.244-.063.45-.228.582a1.387,1.387,0,0,0-.334,2.116.437.437,0,0,1-.028.61c-.213.216-.438.108-.622-.008a1.465,1.465,0,0,0-2.165.33.461.461,0,0,1-.6.189C-1281.767,1192.21-1281.786,1191.984-1281.741,1191.615Z"
+                                                            transform="translate(-79.374 -77.278)" fill="#2d3280" />
+                                                        <path id="Path_83" data-name="Path 83"
+                                                            d="M-1318.506,1210.969c.016.472-.345.487-.629.474a1.45,1.45,0,0,0-1.719,1.214c-.044.2-.159.449-.432.467-.352.024-.445-.276-.505-.512a1.412,1.412,0,0,0-1.616-1.21c-.246.015-.574.038-.679-.285s.158-.5.374-.622a1.319,1.319,0,0,0,.642-1.87c-.095-.229-.2-.524.082-.718s.535.009.716.17a1.341,1.341,0,0,0,2,.016c.19-.165.442-.332.721-.144a.4.4,0,0,1,.119.507,1.58,1.58,0,0,0,.75,2.252C-1318.6,1210.762-1318.558,1210.889-1318.506,1210.969Z"
+                                                            transform="translate(-47.813 -93.455)" fill="#2d3280" />
+                                                        <path id="Path_84" data-name="Path 84"
+                                                            d="M-1263.937,1149.1a1.048,1.048,0,0,1-.219.067c-.4.034-.872.4-1.172.014-.319-.41.152-.779.39-1.06.507-.6.136-1.023-.173-1.492-.163-.248-.4-.522-.189-.813.226-.306.572-.131.838-.027a1.29,1.29,0,0,0,1.735-.575c.155-.236.354-.56.721-.4.274.118.3.444.273.693a1.331,1.331,0,0,0,1.209,1.577c.205.049.458.148.482.418.031.349-.263.44-.513.5a1.384,1.384,0,0,0-1.237,1.58c.011.239.038.573-.282.677-.379.123-.5-.248-.714-.433C-1263.134,1149.521-1263.269,1148.9-1263.937,1149.1Z"
+                                                            transform="translate(-92.948 -44.662)" fill="#2d3280" />
+                                                        <path id="Path_85" data-name="Path 85"
+                                                            d="M-1381.677,1153.7a1.39,1.39,0,0,0-2.015.655.48.48,0,0,1-.571.269.5.5,0,0,1-.276-.563,1.517,1.517,0,0,0-1.309-1.769c-.21-.049-.454-.179-.413-.458.037-.255.276-.362.5-.408a1.461,1.461,0,0,0,1.266-1.672c-.007-.22.006-.472.256-.579.338-.145.505.14.632.339a1.451,1.451,0,0,0,2.015.632.535.535,0,0,1,.64.068c.2.216.066.448-.078.605a1.4,1.4,0,0,0-.046,2.147.511.511,0,0,1,.111.621C-1381.115,1153.834-1381.359,1153.757-1381.677,1153.7Z"
+                                                            transform="translate(0 -48.04)" fill="#2d3280" />
+                                                        <path id="Path_86" data-name="Path 86"
+                                                            d="M-1281.822,1108.067c-.809-.313-1.131.234-1.455.827-.132.241-.243.608-.651.495-.3-.084-.367-.391-.378-.637a1.281,1.281,0,0,0-1.338-1.345c-.257-.024-.57-.069-.659-.362-.1-.328.2-.475.428-.567a1.358,1.358,0,0,0,.955-1.834.522.522,0,0,1,.168-.61c.3-.21.532.027.682.209a1.437,1.437,0,0,0,2.063.351c.216-.126.486-.271.716.014s.013.519-.1.722c-.36.646-.485,1.215.191,1.765.23.187.607.448.359.835C-1281.077,1108.3-1281.47,1108.033-1281.822,1108.067Z"
+                                                            transform="translate(-76.881 -13.078)" fill="#2d3280" />
+                                                        <path id="Path_87" data-name="Path 87"
+                                                            d="M-1365.135,1108.356c-.251.665.209,1,.8,1.3.253.126.625.231.584.608s-.421.427-.705.448a1.223,1.223,0,0,0-1.31,1.249c-.021.279-.074.669-.448.7-.357.033-.5-.32-.616-.586a1.223,1.223,0,0,0-1.621-.794c-.289.077-.657.127-.812-.213-.126-.278.131-.511.322-.668a1.243,1.243,0,0,0,.326-1.847c-.143-.224-.35-.543-.015-.809.272-.217.522,0,.741.1.607.288,1.162.547,1.708-.136.193-.241.49-.607.85-.453C-1364.876,1107.458-1365.072,1107.906-1365.135,1108.356Z"
+                                                            transform="translate(-13.057 -15.614)" fill="#2d3280" />
+                                                        <path id="Path_88" data-name="Path 88"
+                                                            d="M-1327.2,1148.946c-.989.52-.986,1.411-.944,2.342a20.119,20.119,0,0,1,0,2.458c-.078,1.017-.035,1.921,1.181,2.266-1.587-.162-1.587-.162-1.587-1.695,0-1.2.064-2.405-.019-3.6C-1328.644,1149.67-1328.291,1149.065-1327.2,1148.946Z"
+                                                            transform="translate(-44.373 -47.894)" fill="#31404d" />
+                                                        <path id="Path_89" data-name="Path 89"
+                                                            d="M-1347.817,1146.808c-.01,2.28-.01,4.559-.038,6.839a3.885,3.885,0,0,0,.273,1.19c-.51,0-.63-.352-.631-.746q-.011-3.345.008-6.69C-1348.2,1147.145-1348.156,1146.872-1347.817,1146.808Z"
+                                                            transform="translate(-29.269 -46.239)" fill="#3d4854" />
+                                                        <path id="Path_90" data-name="Path 90"
+                                                            d="M-1343.56,1180.868c.709-.8,1.665-.16,2.47-.406C-1341.784,1181.353-1342.731,1180.768-1343.56,1180.868Z"
+                                                            transform="translate(-32.851 -72.27)" fill="#3d4854" />
+                                                        <path id="Path_91" data-name="Path 91"
+                                                            d="M-1333.6,1152.894l-.255-.121.256-.119Z"
+                                                            transform="translate(-40.318 -50.763)" fill="#3d4854" />
+                                                        <path id="Path_92" data-name="Path 92"
+                                                            d="M-1333.533,1147.285a.079.079,0,0,1-.069-.108l.073.032Z"
+                                                            transform="translate(-40.508 -46.525)" fill="#3d4854" />
+                                                        <path id="Path_93" data-name="Path 93"
+                                                            d="M-1333.455,1178.558l-.149.117.146-.121Z"
+                                                            transform="translate(-40.51 -70.803)" fill="#3d4854" />
+                                                    </g>
+                                                </svg>
+                                                Review score
+                                            </span>
+                                            |
+
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-n2 mx-1" width="22px"
+                                                    height="22px" viewBox="0 0 27.02 28.116">
+                                                    <g id="Group_57" data-name="Group 57"
+                                                        transform="translate(832.701 -1097.593)">
+                                                        <path id="Path_62" data-name="Path 62"
+                                                            d="M-720.492,1171.338a2.8,2.8,0,0,0-.094.509,15.832,15.832,0,0,1-.824,2.51,65.307,65.307,0,0,1-3.465,7.068,2.351,2.351,0,0,1-.3.443.448.448,0,0,1-.73,0,3.7,3.7,0,0,1-.442-.688,69.3,69.3,0,0,1-3.148-6.389,17.021,17.021,0,0,1-.974-2.832,5.036,5.036,0,0,1,.995-4.331,4.783,4.783,0,0,1,3.286-1.922,5,5,0,0,1,5.225,2.978,4.744,4.744,0,0,1,.444,1.611c0,.02,0,.037.027.042v.115a.038.038,0,0,0,0,.057v.4a.227.227,0,0,0,0,.172Z"
+                                                            transform="translate(-85.188 -56.354)" fill="#1b1819" />
+                                                        <path id="Path_63" data-name="Path 63"
+                                                            d="M-828.536,1097.618a3.955,3.955,0,0,1,3.625,3.23,4.284,4.284,0,0,1-.19,2.194,17.569,17.569,0,0,1-1.253,2.758,33.142,33.142,0,0,1-2,3.283.505.505,0,0,1-.8.016,12.654,12.654,0,0,1-.865-1.307,29.108,29.108,0,0,1-2.145-4.049,6.551,6.551,0,0,1-.508-1.7,3.815,3.815,0,0,1,.7-2.709,3.985,3.985,0,0,1,2.434-1.671,1.7,1.7,0,0,0,.4-.072h.11a1.491,1.491,0,0,0,.331.015A.615.615,0,0,1-828.536,1097.618Z"
+                                                            fill="#1b1819" />
+                                                        <path id="Path_64" data-name="Path 64"
+                                                            d="M-669.713,1196.322a.132.132,0,0,1,0-.172Z"
+                                                            transform="translate(-135.968 -81.596)" fill="#363637" />
+                                                        <path id="Path_65" data-name="Path 65"
+                                                            d="M-669.682,1193.543c-.031-.019-.037-.038,0-.057Z"
+                                                            transform="translate(-135.999 -79.391)" fill="#6c6e71" />
+                                                        <path id="Path_66" data-name="Path 66"
+                                                            d="M-728.07,1254.343a15.58,15.58,0,0,1-1.8-.21.63.63,0,0,1-.569-.44.549.549,0,0,1,.516-.726c.228.009.456.047.683.078.492.066.986.094,1.48.141a1.845,1.845,0,0,1,.231.036.526.526,0,0,1,.292.854c-.062.082-.139.152-.208.229a.131.131,0,0,1-.111.041C-727.73,1254.342-727.9,1254.343-728.07,1254.343Z"
+                                                            transform="translate(-85.301 -128.636)" fill="#1c1a1a" />
+                                                        <path id="Path_67" data-name="Path 67"
+                                                            d="M-757.066,1215.014a.571.571,0,0,1-.482.568.519.519,0,0,1-.592-.392,10.037,10.037,0,0,1-.21-1.236c-.059-.448-.094-.9-.123-1.352a.193.193,0,0,1,.065-.175c.063-.055.12-.118.179-.178a.511.511,0,0,1,.837.275c.073.389.1.784.151,1.175s.109.8.163,1.2C-757.07,1214.949-757.068,1215-757.066,1215.014Z"
+                                                            transform="translate(-61.934 -94.817)" fill="#1c1a1a" />
+                                                        <path id="Path_68" data-name="Path 68"
+                                                            d="M-759.808,1187.8a.588.588,0,0,1-.326.576.545.545,0,0,1-.625-.124.394.394,0,0,1-.12-.234c-.107-.533-.137-1.077-.221-1.614-.04-.254-.085-.507-.122-.761a.634.634,0,0,1,.418-.688.568.568,0,0,1,.644.41,3.428,3.428,0,0,1,.148.682C-759.922,1186.629-759.85,1187.211-759.808,1187.8Z"
+                                                            transform="translate(-59.636 -72.316)" fill="#1c1a1a" />
+                                                        <path id="Path_69" data-name="Path 69"
+                                                            d="M-775.946,1164.089c0-.486.349-.743.762-.561a3.994,3.994,0,0,1,1.192.884,4.266,4.266,0,0,1,.7.913.6.6,0,0,1-.427.846.437.437,0,0,1-.36-.1,1.426,1.426,0,0,1-.274-.3,3.969,3.969,0,0,0-1.148-1.1,2.192,2.192,0,0,1-.276-.213A.452.452,0,0,1-775.946,1164.089Z"
+                                                            transform="translate(-47.354 -54.54)" fill="#1c1a1a" />
+                                                        <path id="Path_70" data-name="Path 70"
+                                                            d="M-749.574,1240.518c-.008.512-.423.759-.826.518a4.992,4.992,0,0,1-1.261-1.184,4,4,0,0,1-.462-.709.6.6,0,0,1,.446-.85.471.471,0,0,1,.441.188,2.406,2.406,0,0,1,.2.275,4.362,4.362,0,0,0,1.047,1.166c.081.063.154.136.237.2A.409.409,0,0,1-749.574,1240.518Z"
+                                                            transform="translate(-67.181 -116.481)" fill="#1c1a1a" />
+                                                        <path id="Path_71" data-name="Path 71"
+                                                            d="M-797.636,1158.839a7.02,7.02,0,0,1,1.316.143.5.5,0,0,1,.423.445.619.619,0,0,1-.26.606.323.323,0,0,1-.222.06c-.6-.033-1.2-.045-1.8-.134a.488.488,0,0,1-.415-.534.521.521,0,0,1,.425-.562A3.659,3.659,0,0,1-797.636,1158.839Z"
+                                                            transform="translate(-28.46 -50.706)" fill="#1c1a1b" />
+                                                        <path id="Path_72" data-name="Path 72"
+                                                            d="M-719.975,1172.568a3.973,3.973,0,0,1,3.9,3.225,4.328,4.328,0,0,1-.138,2.1,27.141,27.141,0,0,1-1.445,3.606c-.679,1.452-1.388,2.887-2.159,4.288-.1.19-.112.191-.21.007a57.59,57.59,0,0,1-3.327-7.057,8.623,8.623,0,0,1-.492-1.8,3.282,3.282,0,0,1,.132-1.385,3.926,3.926,0,0,1,3.028-2.927A3.762,3.762,0,0,1-719.975,1172.568Z"
+                                                            transform="translate(-90.806 -62.072)" fill="#fff" />
+                                                        <path id="Path_73" data-name="Path 73"
+                                                            d="M-822.961,1113.278a4.5,4.5,0,0,1-.4-.62,37.273,37.273,0,0,1-1.931-3.669,4.545,4.545,0,0,1-.45-1.433,2.8,2.8,0,0,1,1.369-2.761,2.788,2.788,0,0,1,4.177,2.05,2.958,2.958,0,0,1-.194,1.508,23.293,23.293,0,0,1-1.624,3.349C-822.316,1112.231-822.633,1112.749-822.961,1113.278Z"
+                                                            transform="translate(-5.792 -5.626)" fill="#fff" />
+                                                        <path id="Path_74" data-name="Path 74"
+                                                            d="M-716.951,1182.2a2.859,2.859,0,0,1,2.794-2.9,2.884,2.884,0,0,1,2.805,3.064,2.841,2.841,0,0,1-2.92,2.76A2.846,2.846,0,0,1-716.951,1182.2Z"
+                                                            transform="translate(-96.579 -67.649)" fill="#1c1a1b" />
+                                                        <path id="Path_75" data-name="Path 75"
+                                                            d="M-819.065,1112.93a1.763,1.763,0,0,1,1.632-1.724,1.754,1.754,0,0,1,1.73,1.735,1.74,1.74,0,0,1-1.691,1.76A1.72,1.72,0,0,1-819.065,1112.93Z"
+                                                            transform="translate(-11.376 -11.271)" fill="#1c1a1b" />
+                                                        <path id="Path_76" data-name="Path 76"
+                                                            d="M-708.534,1189.527a1.59,1.59,0,0,1-1.583-1.339,1.766,1.766,0,0,1,1.272-2.082,1.715,1.715,0,0,1,2.039,1.822,1.772,1.772,0,0,1-.98,1.5A1.515,1.515,0,0,1-708.534,1189.527Z"
+                                                            transform="translate(-102.252 -73.249)" fill="#fff" />
+                                                        <path id="Path_77" data-name="Path 77"
+                                                            d="M-811.756,1119.12a.588.588,0,0,1-.587-.589.655.655,0,0,1,.566-.567.586.586,0,0,1,.545.6A.525.525,0,0,1-811.756,1119.12Z"
+                                                            transform="translate(-16.986 -16.865)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                                Distance
+                                            </span>
+                                        </p>
+                                        <div class="d-flex mt-5 mb-4">
+                                            <div class="me-2">
+                                                <img src="assets/img/small-size.png" width="50px" alt="mashitools">
+                                            </div>
+                                            <div class="wrap-mashi-link">
+                                                <span class="d-block fw-500">Powered By</span>
+                                                <a href="https://www.mashitools.com"
+                                                    class="text-info mashi-link fw-bold">
+                                                    MASHITOOLS.COM
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- ------------------------ products or services ------------------------- -->
+                                    <div class="wrap-products mb-5">
+                                        <!-- ----------------------------------------------------------------------- -->
+                                        <div class="product-item">
+                                            <div class="product-header mb-2">
+                                                <div class="row gx-0 gy-2">
+                                                    <div class="col-lg-18">
+                                                        <div class="product-header-title">
+                                                            <h2 class="m-0 me-1 d-inline-block">
+                                                                Cairo Marriott Hotel & Omar Khayyam Casino
+                                                            </h2>
+                                                            <div class="d-inline-block rating">
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <p class="m-0 ms-lg-3">
+                                                            Zamalek | <a href="#" class="text-info"><i
+                                                                    class="mdi mdi-map-marker-outline mdi-24px "
+                                                                    style="vertical-align: middle;"></i>Show on
+                                                                Map</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="60"
+                                                                    height="60" viewBox="0 0 91 91">
+                                                                    <g id="Group_65" data-name="Group 65"
+                                                                        transform="translate(-1316 -886)">
+                                                                        <g id="Ellipse_22" data-name="Ellipse 22"
+                                                                            transform="translate(1329 899)" fill="#fff"
+                                                                            stroke="#2d3280" stroke-width="7">
+                                                                            <circle cx="39" cy="39" r="39"
+                                                                                stroke="none" />
+                                                                            <circle cx="39" cy="39" r="35.5"
+                                                                                fill="none" />
+                                                                        </g>
+                                                                        <rect id="Rectangle_85" data-name="Rectangle 85"
+                                                                            width="54" height="54"
+                                                                            transform="translate(1316 886)"
+                                                                            fill="#fff" />
+                                                                    </g>
+                                                                    <text id="_7.7" data-name="7.7"
+                                                                        transform="translate(54 62)" fill="#2d3280"
+                                                                        font-size="23"
+                                                                        font-family="Roboto-Black, Roboto"
+                                                                        font-weight="800">
+                                                                        <tspan x="-19.716" y="0">7.7</tspan>
+                                                                    </text>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="flex-grow-1 align-self-center">
+                                                                <h3 class="text-info m-0 d-block">Good</h3>
+                                                                <small>Based on 8,174 reviews</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-discription">
+                                                <div class="row gx-2 gy-2">
+                                                    <div class="col-md-9 col-sm-10">
+                                                        <div class="img-style">
+                                                            <img src="assets/img/room-1.png" width="100%" alt="room">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-15 col-sm-14">
+                                                        <div class="table-responsive">
+                                                            <table style="width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 text-orange">163£</h3>
+                                                                            <span class="d-block period">For
+                                                                                1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 ">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.skyscanner.com"
+                                                                                class="text-info">Skyscanner.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="text-end mt-2">
+                                                            <a href="#" class="text-info">
+                                                                Compare 6 websites
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item">
+                                            <div class="product-header mb-2">
+                                                <div class="row gx-0 gy-2">
+                                                    <div class="col-lg-18">
+                                                        <div class="product-header-title">
+                                                            <h2 class="m-0 me-1 d-inline-block">
+                                                                Cairo Marriott Hotel & Omar Khayyam Casino
+                                                            </h2>
+                                                            <div class="d-inline-block rating">
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <p class="m-0 ms-lg-3">
+                                                            Zamalek | <a href="#" class="text-info"><i
+                                                                    class="mdi mdi-map-marker-outline mdi-24px "
+                                                                    style="vertical-align: middle;"></i>Show on
+                                                                Map</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="60"
+                                                                    height="60" viewBox="0 0 91 91">
+                                                                    <g id="Group_65" data-name="Group 65"
+                                                                        transform="translate(-1316 -886)">
+                                                                        <g id="Ellipse_22" data-name="Ellipse 22"
+                                                                            transform="translate(1329 899)" fill="#fff"
+                                                                            stroke="#2d3280" stroke-width="7">
+                                                                            <circle cx="39" cy="39" r="39"
+                                                                                stroke="none" />
+                                                                            <circle cx="39" cy="39" r="35.5"
+                                                                                fill="none" />
+                                                                        </g>
+                                                                        <rect id="Rectangle_85" data-name="Rectangle 85"
+                                                                            width="54" height="54"
+                                                                            transform="translate(1316 886)"
+                                                                            fill="#fff" />
+                                                                    </g>
+                                                                    <text id="_7.7" data-name="7.7"
+                                                                        transform="translate(54 62)" fill="#2d3280"
+                                                                        font-size="23"
+                                                                        font-family="Roboto-Black, Roboto"
+                                                                        font-weight="800">
+                                                                        <tspan x="-19.716" y="0">7.7</tspan>
+                                                                    </text>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="flex-grow-1 align-self-center">
+                                                                <h3 class="text-info m-0 d-block">Good</h3>
+                                                                <small>Based on 8,174 reviews</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-discription">
+                                                <div class="row gx-2 gy-2">
+                                                    <div class="col-md-9 col-sm-10">
+                                                        <div class="img-style">
+                                                            <img src="assets/img/room-2.png" width="100%" alt="room">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-15 col-sm-14">
+                                                        <div class="table-responsive">
+                                                            <table style="width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 text-orange">163£</h3>
+                                                                            <span class="d-block period">For
+                                                                                1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 ">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.skyscanner.com"
+                                                                                class="text-info">Skyscanner.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="text-end mt-2">
+                                                            <a href="#" class="text-info">
+                                                                Compare 6 websites
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item">
+                                            <div class="product-header mb-2">
+                                                <div class="row gx-0 gy-2">
+                                                    <div class="col-lg-18">
+                                                        <div class="product-header-title">
+                                                            <h2 class="m-0 me-1 d-inline-block">
+                                                                Sofitel Cairo Nile El Gezirah
+                                                            </h2>
+                                                            <div class="d-inline-block rating">
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                                <i class="mdi mdi-star text-warning "
+                                                                    style="font-size: 14px;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <p class="m-0 ms-lg-3">
+                                                            Zamalek | <a href="#" class="text-info"><i
+                                                                    class="mdi mdi-map-marker-outline mdi-24px "
+                                                                    style="vertical-align: middle;"></i>Show on
+                                                                Map</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-2">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="60"
+                                                                    height="60" viewBox="0 0 91 91">
+                                                                    <g id="Group_65" data-name="Group 65"
+                                                                        transform="translate(-1316 -886)">
+                                                                        <g id="Ellipse_22" data-name="Ellipse 22"
+                                                                            transform="translate(1329 899)" fill="#fff"
+                                                                            stroke="#2d3280" stroke-width="7">
+                                                                            <circle cx="39" cy="39" r="39"
+                                                                                stroke="none" />
+                                                                            <circle cx="39" cy="39" r="35.5"
+                                                                                fill="none" />
+                                                                        </g>
+                                                                        <rect id="Rectangle_85" data-name="Rectangle 85"
+                                                                            width="54" height="54"
+                                                                            transform="translate(1316 886)"
+                                                                            fill="#fff" />
+                                                                    </g>
+                                                                    <text id="_7.7" data-name="7.7"
+                                                                        transform="translate(54 62)" fill="#2d3280"
+                                                                        font-size="23"
+                                                                        font-family="Roboto-Black, Roboto"
+                                                                        font-weight="800">
+                                                                        <tspan x="-19.716" y="0">7.7</tspan>
+                                                                    </text>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="flex-grow-1 align-self-center">
+                                                                <h3 class="text-info m-0 d-block">Good</h3>
+                                                                <small>Based on 8,174 reviews</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-discription">
+                                                <div class="row gx-2 gy-2">
+                                                    <div class="col-md-9 col-sm-10">
+                                                        <div class="img-style">
+                                                            <img src="assets/img/room-3.png" width="100%" alt="room">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-15 col-sm-14">
+                                                        <div class="table-responsive">
+                                                            <table style="width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 text-orange">163£</h3>
+                                                                            <span class="d-block period">For
+                                                                                1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0 ">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.skyscanner.com"
+                                                                                class="text-info">Skyscanner.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.agoda.com"
+                                                                                class="text-info">Agoda.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free Wi-Fi</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Pay at hotel</span>
+                                                                                </div>
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                            <a href="#" class="btn btn-orange">View
+                                                                                Deal</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 93px;">
+                                                                            <a href="https://www.booking.com"
+                                                                                class="text-info">Booking.com</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="features-list">
+                                                                                <div class="feature-item">
+                                                                                    <i
+                                                                                        class="mdi mdi-checkbox-marked-circle-outline text-success"></i>
+                                                                                    <span>Free cancellation</span>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <h3 class="m-0">163£</h3>
+                                                                            <span class="d-block period">For 1
+                                                                                Night</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="text-end mt-2">
+                                                            <a href="#" class="text-info">
+                                                                Compare 6 websites
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------- pagination ------------------------------ -->
+                                    <div class="wrap-pagination mb-5 mx-md-auto">
+                                        <div class="p-2 px-sm-5 border">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <button class="btn border p-2 previous-btn">
+                                                    <span class="d-none d-sm-inline-block">Previous</span>
+                                                    <i class="mdi mdi-arrow-left d-sm-none"></i>
+                                                </button>
+                                                <div class="pagination-numbers px-1">
+                                                    <a href="#">1</a>
+                                                    <a href="#">2</a>
+                                                    <a href="#">3</a>
+                                                    <a href="#">4</a>
+                                                    <a href="#">5</a>
+                                                    <a href="#">6</a>
+                                                    <a href="#">...</a>
+                                                    <a href="#">71</a>
+                                                </div>
+                                                <button class="btn border py-2 px-sm-4 next-btn active">
+                                                    <span class="d-none d-sm-inline-block">Next</span>
+                                                    <i class="mdi mdi-arrow-right d-sm-none"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------------------------------------------------- -->
+                                    <div class="adv mb-5">
+                                        <a href="#" target="_blank" rel="noopener noreferrer">
+                                            <img src="assets/img/main-adv.jpg" width="100%" alt="adv">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------ Side Adv ------------------------------- -->
+                    <div class="col-lg-4 pt-5 d-none d-lg-block">
+                        <div class="mb-5 pb-5">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/img/side-adv-1.png" width="100%" alt="adv">
+                            </a>
+                        </div>
+                        <div class="mb-5 mt-5 pb-5">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/img/side-adv-2.png" width="100%" alt="adv">
+                            </a>
+                        </div>
+                        <div class="mb-5 mt-5">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/img/side-adv-3.png" width="100%" alt="adv">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- ------------------------------- Footer -------------------------------- -->
+        <footer class="mt-5 pb-5">
+            <div class="container">
+                <div class="row gx-1 gy-4">
+                    <div class="col-lg-18">
+                        <div class="row gx-2 gy-4">
+                            <div class="col-md-3 align-self-center">
+                                <img src="assets/img/big-size.png" width="75" class="d-block" alt="mashi">
+                            </div>
+                            <div class="col-md-21">
+                                <article>
+                                    <small>© <script>
+                                            document.write(new Date().getFullYear())
+                                        </script> MASHITOOLS LLC Tous droitsréservés.</small>
+                                    <div class="py-1">
+                                        <a href="#" class="d-inline-block fw-500 me-2 underline">Terms of Use</a>
+                                        <a href="#" class="d-inline-block fw-500 me-2 underline">Privacy and Cookies
+                                            Statement</a>
+                                        <a href="#" class="d-inline-block fw-500 me-2 underline">Cookies Consent</a>
+                                        <a href="#" class="d-inline-block fw-500 me-2 underline">Site Map</a>
+                                        <a href="#" class="d-inline-block fw-500 underline">How the site works</a>
+                                    </div>
+                                    <p class="m-0">
+                                        This is the version of our website addressed to speakers of English in the
+                                        United
+                                        States. If you are a resident of another country or region, please select the
+                                        appropriate version of MASHITOOLS for your country or region in the drop-down
+                                        menu.
+                                        <a href="#">MORE</a>
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="dropdown-group d-flex align-items-center">
+                            <div class="dropdown-wrap me-2">
+                                <button class="dropdown-toggle-btn btn border d-flex align-items-center"
+                                    data-dropdown-distination="sar-dropdown">
+                                    <span>SAR</span>
+                                    <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                </button>
+                                <ul class="dropdown-menu sar-dropdown">
+                                    <li class="dropdown-menu-item">
+                                        Item
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        Item
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-wrap">
+                                <button class="dropdown-toggle-btn btn border d-flex align-items-center"
+                                    data-dropdown-distination="states-dropdown">
+                                    <span>United States</span>
+                                    <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                </button>
+                                <ul class="dropdown-menu location-dropdown">
+                                    <li class="dropdown-menu-item">
+                                        Usa
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        Egypt
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/libs/jquery-3.5.1.min.js"></script>
+    <script src="./js/libs/jquery-ui.min.js"></script>
+    <script src="./js/libs/bootstrap-slider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
