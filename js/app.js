@@ -5,6 +5,7 @@ $(function () {
   const rangeSlideShowValue = $(".refine-search .range-wrap .input-number");
   // Collapses Function
   const collapseWrap = $(".collapse-wrap");
+  const dropdownsWrap = $(".dropdown-wrap");
 
   let durationANM = 700;
 
@@ -34,25 +35,40 @@ $(function () {
 
   /* ----------------------------- Hanlde Collapse ---------------------------- */
   collapseWrap.each(function () {
-    const that = $(this);
     let collapseToggle = $(this).find(".collapse-toggle-btn");
     /* -------------------------------------------------------------------------- */
+    collapseDropdowns(collapseToggle);
+  });
+
+  dropdownsWrap.each(function () {
+    let collapseToggle = $(this).find(".dropdown-toggle-btn");
+    /* -------------------------------------------------------------------------- */
+    collapseDropdowns(collapseToggle, true);
+  });
+
+  function collapseDropdowns(toggleBTN, changeBorder = false) {
+    let collapseToggle = toggleBTN;
     collapseToggle.on("click", function () {
-      let theCollapseMenu = $(this).next();
-      theCollapseMenu.slideToggle(durationANM, function () {
-        console.log($(this));
-      });
-      if (theCollapseMenu.hasClass("hide")) {
+      let menueList = $(this).next();
+      menueList.slideToggle(durationANM / 4);
+      if (menueList.hasClass("hide")) {
         $(this).find(".mdi").removeClass("mdi-menu-down");
         $(this).find(".mdi").addClass("mdi-menu-up");
-        theCollapseMenu.removeClass("hide");
+        menueList.removeClass("hide");
+        collapseToggle.removeAttr("style");
       } else {
+        // Change Border
+        if (changeBorder) {
+          collapseToggle.css({
+            borderRadius: "5px 5px 0 0",
+          });
+        }
         $(this).find(".mdi").addClass("mdi-menu-down");
         $(this).find(".mdi").removeClass("mdi-menu-up");
-        theCollapseMenu.addClass("hide");
+        menueList.addClass("hide");
       }
     });
-  });
+  }
   /* ------------------------------- Handle Date ------------------------------ */
   $("#checkinID").datepicker({
     dateFormat: "D dd/mm",
