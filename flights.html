@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASHITOOLS - Flights</title>
+    <meta name="description" content="Cairo Marriott Hotel & Omar Khayyam Casino, Mashitools">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./css/libs/normalize.css">
+    <link rel="stylesheet" href="./css/libs/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/libs/bootstrap-slider-fligts.css">
+    <link rel="stylesheet" href="./css/libs/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/flightsStyle.css">
+</head>
+
+<body>
+
+    <div class="wrap-body">
+        <!-- ------------------------------- Header -------------------------------- -->
+
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-15 col-md-10 col-lg-7">
+                            <div class="text-center ps-md-3 wrap-header-top-content">
+                                <p>
+                                    Go Fly Again And Again With Mashi
+                                    Reserve Your Flight And Your Hotel
+                                    Mashi Means "Walking with God's Care"
+                                </p>
+                                <a href="#">
+                                    Learn More >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-navbar py-2 mb-3 mt-2">
+                <div class="container">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-5">
+                            <div class="m-navbar-logo">
+                                <a href="#" class="d-flex align-items-center">
+                                    <img src="assets/img/big-size.png" alt="logo mashitools" class="m-navbar-logo-img"
+                                        width="75">
+                                    <h3 class="m-navbar-text ms-1 my-0">MASHITOOLS</h3>
+                                </a>
+                                <div class="toggle-btn"><i class="mdi mdi-menu"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-19">
+                            <ul class="nav-items-wrap">
+                                <li class="nav-item search-item">
+                                    <div class="input-group rounded-pill border">
+                                        <button class="input-group-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                                viewBox="0 0 52 52">
+                                                <image id="Rectangle_43" data-name="Rectangle 43" width="52" height="52"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </svg>
+
+                                        </button>
+                                        <input type="text" name="headerSearh" class="input-group-item">
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn nav-item-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            viewBox="0 0 39 39">
+                                            <g id="Group_1" data-name="Group 1"
+                                                transform="translate(-423.402 -589.279)">
+                                                <path id="Path_1" data-name="Path 1"
+                                                    d="M426.948,624.724c1.508,0,2.945.006,4.381-.01a.688.688,0,0,0,.415-.216q11.338-11.322,22.664-22.654a1.226,1.226,0,0,0,.11-.162c-.136-.144-.267-.292-.407-.432q-2.6-2.6-5.2-5.206a1.807,1.807,0,0,1,.014-2.885q1.6-1.607,3.21-3.208a1.783,1.783,0,0,1,2.772-.021q3.456,3.432,6.888,6.887a1.772,1.772,0,0,1-.019,2.691c-.579.594-1.173,1.175-1.76,1.762q-13.072,13.07-26.138,26.147a2.629,2.629,0,0,1-2.053.862c-2.139-.045-4.28-.013-6.42-.015a1.836,1.836,0,0,1-1.994-1.993c0-2.214.01-4.427-.007-6.641a2.144,2.144,0,0,1,.667-1.629q9.615-9.6,19.22-19.21a1.762,1.762,0,0,1,2.584-.149,1.811,1.811,0,0,1-.1,2.7q-9.195,9.2-18.4,18.385a1.321,1.321,0,0,0-.429,1.062C426.965,622.072,426.948,623.361,426.948,624.724ZM452.6,594.569l4.478,4.491.912-.882-4.5-4.5Z"
+                                                    transform="translate(0)" />
+                                                <path id="Path_2" data-name="Path 2"
+                                                    d="M467.385,679.157q3.095,0,6.19,0a1.731,1.731,0,0,1,1.67,1.944,1.69,1.69,0,0,1-1.68,1.864q-6.239.006-12.478,0a1.734,1.734,0,0,1-1.645-1.974,1.684,1.684,0,0,1,1.655-1.833C463.193,679.153,465.289,679.157,467.385,679.157Z"
+                                                    transform="translate(-20.596 -54.705)" />
+                                                <path id="Path_3" data-name="Path 3"
+                                                    d="M497.436,601.4l.8-.954,4.031,4.841-.817.95Z"
+                                                    transform="translate(-43.808 -6.424)" fill="#fff" />
+                                            </g>
+                                        </svg>
+                                        <span>Review</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn nav-item-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.365"
+                                            viewBox="0 0 39 38.365">
+                                            <path id="Path_4" data-name="Path 4"
+                                                d="M841.207,35.6a19.158,19.158,0,0,1,2.759-4.3,11.49,11.49,0,0,1,5.392-3.677,8.367,8.367,0,0,1,10.3,4.975,10.688,10.688,0,0,1-.392,9.275,27.418,27.418,0,0,1-3.674,5.358c-2.142,2.532-4.515,4.846-6.825,7.22a54.223,54.223,0,0,0-5.1,5.794,13.412,13.412,0,0,0-2.226,4.238c-.1.35-.163.71-.257,1.128-.052-.159-.088-.269-.123-.379a20.638,20.638,0,0,0-5.1-8.25,52.172,52.172,0,0,0-5.952-5c-1.566-1.185-3.127-2.38-4.641-3.63a11.779,11.779,0,0,1-2.947-3.5,7.733,7.733,0,0,1-.865-4.261,13,13,0,0,1,1.269-4.992,10.06,10.06,0,0,1,5.423-5.165,9.156,9.156,0,0,1,8.049.67A15.085,15.085,0,0,1,841,35.346C841.062,35.423,841.123,35.5,841.207,35.6Z"
+                                                transform="translate(-821.537 -27.251)" />
+                                        </svg>
+
+                                        <span>Trips</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn nav-item-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25.554"
+                                            viewBox="0 0 39 44.554">
+                                            <path id="Path_5" data-name="Path 5"
+                                                d="M1117.9,518.558v-1.133a1.32,1.32,0,0,0,.128-.269,4.819,4.819,0,0,1,4.173-4.042c1.667-.285,3.345-.517,5.025-.723a5.8,5.8,0,0,0,4.576-2.476c.26-.4.58-.77.857-1.164a37.138,37.138,0,0,1,5.667-6.949,10.248,10.248,0,0,1,7.467-2.893c.553.03,1.106.073,1.659.11.129-3.016,1.967-4.38,3.484-4.726a4.615,4.615,0,0,1,5.3,2.3c1.086,2.11.548,4.135-1.646,6.165a1.971,1.971,0,0,0,.141.195,8.419,8.419,0,0,1,2.109,6.911,26.391,26.391,0,0,1-1.75,6.386c-.847,2.292-1.725,4.577-2.469,6.9a5.386,5.386,0,0,0,.551,4.645,21.231,21.231,0,0,1,1.574,3.407,4.622,4.622,0,0,1,.25,3.255,25.05,25.05,0,0,1-1.128,2.3,2.855,2.855,0,0,1-1.855,1.576c-.5.145-1,.249-1.505.372h-2.392c-.389-.063-.786-.094-1.164-.194-2.1-.554-4.189-1.131-6.287-1.682a2.519,2.519,0,0,0-1.037-.1,6.889,6.889,0,0,1-7.539-3.74,1.406,1.406,0,0,0-.477-.545,52.325,52.325,0,0,1-8.033-5.93C1121.133,524.265,1118.788,521.926,1117.9,518.558Zm20.885,4.519c-1.118-.6-2.224-1.224-3.356-1.8a36.982,36.982,0,0,0-9.771-3.526,11.767,11.767,0,0,0-4.491-.2c-.624.121-.791.3-.591.887a6.778,6.778,0,0,0,.727,1.521,30.156,30.156,0,0,0,7.907,7.743c.706.512,1.438.988,2.19,1.5A7.173,7.173,0,0,1,1138.784,523.077Zm4.356,11.775a21.258,21.258,0,0,0,6.67,1.077c1.727-.068,1.974-.48,1.117-1.975a26.357,26.357,0,0,0-6.5-7A7.061,7.061,0,0,1,1143.14,534.852Z"
+                                                transform="translate(-1117.899 -494.154)" />
+                                        </svg>
+
+                                        <span>Alerts</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn signin-link rounded-pill">
+                                        Sign in
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="links-navbar">
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="links-navbar-link">Cairo</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link">Hotels</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link">Things to do</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link">Restaurants</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link active">Flights</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link active">Vacation Rentals</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link active">Vacation Packages</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link active">Cruises</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="links-navbar-link active">Rentals Cars</a>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown-wrap">
+                                            <button class="dropdown-toggle-btn btn  d-flex align-items-center">
+                                                <span class="mdi mdi-dots-horizontal"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-menu-item">
+                                                    Usa
+                                                </li>
+                                                <li class="dropdown-menu-item">
+                                                    Egypt
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-breadcumbs-wrap mb-3">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between flex-wrap">
+                        <div class="breadcumb-items me-2">
+                            <a href="#" class="breadcumb-item">
+                                Cairo
+                            </a>
+                            <a href="#" class="breadcumb-item">
+                                Egypt
+                            </a>
+                            <a href="#" class="breadcumb-item">
+                                Cairo Governorate
+                            </a>
+                            <a href="#" class="breadcumb-item">
+                                Cairo
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="link">
+                                Cheap Flights To Cairo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="header-navtabs">
+                <div class="container-fluid">
+                    <div class="nav-tabs-wrap">
+                        <div class="tab-buttons">
+                            <button class="tab-btn-item btn active" data-tab-distination="roundtrip-tab">Round
+                                Trip</button>
+                            <button class="tab-btn-item btn" data-tab-distination="oneway-tab">One Way</button>
+                            <button class="tab-btn-item btn" data-tab-distination="multicity-tab">Multi-City</button>
+                        </div>
+                        <div class="tabs-items py-3">
+                            <div class="tab-item roundtrip-tab active">
+                                <form>
+                                    <div class="row gy-2 gx-1">
+                                        <div class="col-md-12 col-xl-5">
+                                            <div class="d-flex border">
+                                                <div class="flex-shrink-0">
+                                                    <i class="mdi mdi-map-marker-radius"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <small>From</small>
+                                                    <input type="text" class="form-control" name="locationFrom"
+                                                        value="Amman(AMM)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-xl-5">
+                                            <div class="d-flex border">
+                                                <div class="flex-shrink-0">
+                                                    <i class="mdi mdi-map-marker-radius"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <small>To</small>
+                                                    <input type="text" class="form-control" name="locationTo"
+                                                        value="Cairo(CAI)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-xl-3">
+                                            <div class="d-flex border">
+                                                <div class="flex-shrink-0">
+                                                    <i class="mdi mdi-calendar-month-outline text-success"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <small>Depart</small>
+                                                    <input type="text" class="form-control calendar" name="depart"
+                                                        value="Wed, 11/9">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-xl-3">
+                                            <div class="d-flex border">
+                                                <div class="flex-shrink-0">
+                                                    <i class="mdi mdi-calendar-month-outline text-orange"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <small>Return</small>
+                                                    <input type="text" class="form-control calendar" name="return"
+                                                        value="Sun, 11/21">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xl-4">
+                                            <div class="d-flex border">
+                                                <div class="flex-shrink-0">
+                                                    <i class="mdi mdi-account-supervisor"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <small>Travelers</small>
+                                                    <input type="text" size="15" class="form-control" name="travelers"
+                                                        value="1, Economy">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-24 col-xl-4">
+                                            <button type="submit"
+                                                class="btn w-100 py-3 rounded search-btn">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-item oneway-tab">
+                                empty Ony Way
+                            </div>
+                            <div class="tab-item multicity-tab">
+                                empty Multi Cities
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ------------------------------- content ------------------------------- -->
+        <hr class="divide mb-0">
+
+        <div class="wrap-content pt-3">
+            <div class="px-3">
+                <div class="row">
+                    <!-- ------------------------- content items and filter ------------------------- -->
+                    <div class="col-lg-19">
+                        <div class="row gy-3">
+                            <!-- Filter -->
+                            <div class="col-md-6 pt-4 pt-md-5">
+                                <div class="search-sidebar border px-3 pt-1 pb-3">
+                                    <!-- ----------------------------------------------------------------------- -->
+                                    <div class="collapse-wrap">
+                                        <button
+                                            class="btn collapse-toggle-btn p-0 w-100 fw-bold mb-2 d-flex align-items-center"
+                                            data-collapse-distnation="stops-filter">
+                                            <h3 class="m-0">Stops</h3>
+                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                        </button>
+                                        <div class="collapse-menu stops-filter">
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">NonStop</label>
+                                                <small class=" d-inline-block ms-auto">SAR
+                                                    1,401</small>
+                                            </div>
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">1 Stop</label>
+                                                <small class=" d-inline-block ms-auto">SAR
+                                                    2,321</small>
+                                            </div>
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">+2 Stop</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="collapse-wrap">
+                                        <button
+                                            class="btn collapse-toggle-btn p-0 w-100 fw-bold mb-2 d-flex align-items-center"
+                                            data-collapse-distnation="covid19-filter">
+                                            <h3 class="m-0">COVID-19 Policies</h3>
+                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                        </button>
+                                        <div class="collapse-menu covid19-filter">
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="covid19Policies" class="form-check me-2">
+                                                <label for="stops">Flexible Changes</label>
+                                            </div>
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="covid19Policies" class="form-check me-2">
+                                                <label for="stops">Flexible Cancellation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="collapse-wrap">
+                                        <button
+                                            class="btn collapse-toggle-btn p-0 w-100 fw-bold mb-2 d-flex align-items-center"
+                                            data-collapse-distnation="flightTimes-filter">
+                                            <h3 class="m-0">Flight Times</h3>
+                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                        </button>
+                                        <div class="collapse-menu flightTimes-filter">
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Take-off</h5>
+                                                    <small>Amman (AMM)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Landing</h5>
+                                                    <small>Cairo (CAI)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Take-off</h5>
+                                                    <small>Amman (AMM)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Landing</h5>
+                                                    <small>Cairo (CAI)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Take-off</h5>
+                                                    <small>Amman (AMM)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Landing</h5>
+                                                    <small>Cairo (CAI)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Take-off</h5>
+                                                    <small>Amman (AMM)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">Sat 9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                            <div class="range-time-item">
+                                                <div class="rtime-header mb-2">
+                                                    <h5 class="d-inline-block my-0 fs-17px">Landing</h5>
+                                                    <small>Cairo (CAI)</small>
+                                                    <div class="d-flex flex-wrap justify-content-between">
+                                                        <small class="very-small">Wed 1:45 AM</small>
+                                                        <small class="very-small">9:45 AM</small>
+                                                    </div>
+                                                </div>
+                                                <div class="rtime-range">
+                                                    <input type="range" name="timeRange[]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="collapse-wrap">
+                                        <button
+                                            class="btn collapse-toggle-btn p-0 w-100 fw-bold mb-2 d-flex align-items-center"
+                                            data-collapse-distnation="stops-filter">
+                                            <h3 class="m-0">Stops</h3>
+                                            <i class="mdi mdi-menu-down mdi-36px ms-auto"></i>
+                                        </button>
+                                        <div class="collapse-menu stops-filter">
+                                            <!-- ----------------------------------------------------------------------- -->
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">NonStop</label>
+                                                <small class=" d-inline-block ms-auto">SAR
+                                                    1,401</small>
+                                            </div>
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">1 Stop</label>
+                                                <small class=" d-inline-block ms-auto">SAR
+                                                    2,321</small>
+                                            </div>
+                                            <div class="d-flex align-items-center check-group">
+                                                <input type="checkbox" name="stops" class="form-check me-2">
+                                                <label for="stops">+2 Stop</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Content Items -->
+                            <div class="col-md-18 pt-md-5 pt-2">
+                                <!-- Top Filter -->
+                                <div class="d-flex align-items-center justify-content-end mb-3">
+                                    <span class="me-2">Sort by</span>
+                                    <form class="form-option me-2">
+                                        <select name="sortby">
+                                            <option value="best-value" selected>Best Value</option>
+                                            <option value="low-value">Low Value</option>
+                                            <option value="any-value">any Value</option>
+                                        </select>
+                                    </form>
+                                    <i class="mdi mdi-help-circle-outline"></i>
+                                </div>
+                                <!-- Items -->
+                                <div class="wrap-content-items">
+                                    <div class="sponsered-item">
+                                        <div class="row g-0">
+                                            <div class="col-sm-7">
+                                                <img src="assets/img/sonsered-img.jpg" class="sp-img"
+                                                    alt="sponsered img">
+
+                                            </div>
+                                            <div class="col-sm-17">
+                                                <div class="p-2 sp-wrap">
+                                                    <div class="row g-2">
+                                                        <div class="col-sm-16">
+                                                            <span class="badge mb-3 rounded-pill">Sponsered</span>
+                                                            <strong class="mb-1">
+                                                                Planning to drive ? Rent a car with tripadvisor
+                                                            </strong>
+                                                            <p class="mb-0 mt-2 pb-2">
+                                                                Find great deals on rental in CAI between NOV 17 and NOV
+                                                                21
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <a href="#" class="btn-orange btn"><span
+                                                                    class="d-inline-block me-2">View
+                                                                    Deal</span> ></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item border p-2">
+                                        <div class="text-end">
+                                            <b>SAR 1,401</b>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-sm-18">
+                                                <div class="table-responsive">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">2:35 PM - 4:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 25m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="assets/img/black-img.jpg" class="avatar"
+                                                                    alt="avatar">
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0 from-h4">6:35 PM - 7:00 PM</h4>
+                                                                <small>AMM - CAI, Egyptair</small>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <h4 class="fw-500 my-0">1h 10m</h4>
+                                                                <small>Nonstop</small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 align-self-center">
+                                                <a href="#" class="btn-orange btn"><span
+                                                        class="d-inline-block me-2">View
+                                                        Deal</span> ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ----------------------------- pagination ------------------------------ -->
+                                <div class="wrap-pagination mb-3 mx-md-auto">
+                                    <div class="p-2 px-sm-5 border">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <button class="btn border p-2 previous-btn">
+                                                <span class="d-none d-sm-inline-block">Previous</span>
+                                                <i class="mdi mdi-arrow-left d-sm-none"></i>
+                                            </button>
+                                            <div class="pagination-numbers px-1">
+                                                <a href="#">1</a>
+                                                <a href="#">2</a>
+                                                <a href="#">3</a>
+                                                <a href="#">4</a>
+                                                <a href="#">5</a>
+                                                <a href="#">6</a>
+                                                <a href="#">...</a>
+                                                <a href="#">71</a>
+                                            </div>
+                                            <button class="btn border py-2 px-sm-4 next-btn active">
+                                                <span class="d-none d-sm-inline-block">Next</span>
+                                                <i class="mdi mdi-arrow-right d-sm-none"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ----------------------------------------------------------------------- -->
+                                <div class="border bg-white p-2">
+                                    <strong class="mb-2 d-block">Compare More Cheap Flights On ...</strong>
+                                    <div class="wrap-compires-items">
+                                        <div class="co-item">
+                                            <img src="assets/img/black-img.jpg" class="avatar mb-3" alt="avatar">
+                                            <a href="#" class="border btn">
+                                                <span class="d-inline-block me-2">
+                                                    Compare
+                                                </span>
+                                                >
+                                            </a>
+                                        </div>
+                                        <div class="co-item">
+                                            <img src="assets/img/black-img.jpg" class="avatar mb-3" alt="avatar">
+                                            <a href="#" class="border btn">
+                                                <span class="d-inline-block me-2">
+                                                    Compare
+                                                </span>
+                                                >
+                                            </a>
+                                        </div>
+                                        <div class="co-item">
+                                            <img src="assets/img/black-img.jpg" class="avatar mb-3" alt="avatar">
+                                            <a href="#" class="border btn">
+                                                <span class="d-inline-block me-2">
+                                                    Compare
+                                                </span>
+                                                >
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="p-4 text-gray">
+                                    ** saving based on all vacation package booking with flight + Hotles on Expedia.com
+                                    as compared to price of the same component booked separately on Expedia.com .Saving
+                                    will very based on orign/destination, length of trip , stay dates and selected
+                                    travel supplier(s) . Savings not available on all packages
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------ Sidebar ------------------------------- -->
+                    <div class="col-lg-5 pt-5 d-none d-lg-block">
+                        <p class="p-3 mt-0 text-gray">
+                            ** saving based on all vacation package booking with flight + Hotles on Expedia.com as
+                            compared to price of the same component booked separately on Expedia.com .
+                        </p>
+                        <!-- ADV 1 -->
+                        <div class="items-group-wrap mb-3">
+                            <div class="items p-1">
+                                <span class="d-block mb-2">See More Prices on :</span>
+                                <div class="d-flex flex-wrap justify-content-between">
+                                    <a href="#" class="btn ms-1">LOGO</a>
+                                    <a href="#" class="btn border">
+                                        <span class="d-inline-block me-2">
+                                            Compare
+                                        </span>
+                                        >
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="items p-1">
+
+                                <div class="d-flex flex-wrap justify-content-between">
+                                    <a href="#" class="btn ms-1">LOGO</a>
+                                    <a href="#" class="btn border">
+                                        <span class="d-inline-block me-2">
+                                            Compare
+                                        </span>
+                                        >
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="items p-1">
+
+                                <div class="d-flex flex-wrap justify-content-between">
+                                    <a href="#" class="btn ms-1">LOGO</a>
+                                    <a href="#" class="btn border">
+                                        <span class="d-inline-block me-2">
+                                            Compare
+                                        </span>
+                                        >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ADV 2 -->
+
+                        <div class="adv-with-text adv-tx-1 mb-3">
+                            <a href="#">
+                                <div class="wr-img">
+                                    <img src="assets/img/sonsered-img.jpg" width="100%" class="border" alt="beach">
+                                </div>
+                                <div class="adv-text-mashitool">
+                                    <span>-50%</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- ADV 3 -->
+                        <div class="adv-with-text adv-tx-2 mb-3">
+                            <a href="#">
+                                <div class="wr-img">
+                                    <img src="assets/img/sonsered-img.jpg" width="100%" class="border" alt="beach">
+                                </div>
+                                <div class="adv-text-mashitool">
+                                    <span>-20%</span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ADV 4 -->
+                        <div class="adv-with-text adv-tx-3 mb-3">
+                            <a href="#">
+                                <div class="wr-img">
+                                    <img src="assets/img/sonsered-img.jpg" width="100%" class="border" alt="beach">
+                                </div>
+                                <div class="adv-text-mashitool">
+                                    <span>-20%</span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Skyscanner -->
+                        <div class="adv-table">
+                            <img src="assets/img/Skyscanner-Logo.png" class="adv-table-header border d-block"
+                                width="100%" alt="skyscanner">
+                            <div class="list-grup">
+                                <div class="item">
+                                    <div class="border">
+                                        <p class="m-0 px-4 pt-3 pb-0">
+                                            Jeddah to United kingdom from 290£
+                                        </p>
+                                        <div class="text-end">
+                                            <a href="#" class="btn py-1 px-3">Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="border">
+                                        <p class="m-0 px-4 pt-3 pb-0">
+                                            Jeddah to United kingdom from 290£
+                                        </p>
+                                        <div class="text-end">
+                                            <a href="#" class="btn py-1 px-3">Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="border">
+                                        <p class="m-0 px-4 pt-3 pb-0">
+                                            Jeddah to United kingdom from 290£
+                                        </p>
+                                        <div class="text-end">
+                                            <a href="#" class="btn py-1 px-3">Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="border">
+                                        <p class="m-0 px-4 pt-3 pb-0">
+                                            Jeddah to United kingdom from 290£
+                                        </p>
+                                        <div class="text-end">
+                                            <a href="#" class="btn py-1 px-3">Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="border">
+                                        <p class="m-0 px-4 pt-3 pb-0">
+                                            Jeddah to United kingdom from 290£
+                                        </p>
+                                        <div class="text-end">
+                                            <a href="#" class="btn py-1 px-3">Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------- Footer -------------------------------- -->
+        <div class="center-adv pb-5">
+            <div class="container">
+                <div class="row justify-content-center g-0">
+                    <div class="col-md-17">
+                        <div class="adv-table">
+                            <div class="row g-0">
+                                <div class="col-md-8 p-0">
+                                    <img src="assets/img/Skyscanner-Logo.png" class="adv-table-header border d-block"
+                                        width="100%" alt="skyscanner">
+                                </div>
+                                <div class="col-md-16 p-0">
+                                    <div class="list-grup border p-1">
+                                        <div class="row g-2">
+
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="item bg-white">
+                                                    <div class="border">
+                                                        <p class="m-0 px-3 pt-2 pb-0">
+                                                            Jeddah to United kingdom from 290£
+                                                        </p>
+                                                        <div class="text-end">
+                                                            <a href="#" class="btn py-1 px-3 m-2">Book Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-5 pb-5">
+            <div class="container">
+                <div class="row gx-2 gy-4">
+                    <div class="col-md-3 align-self-start">
+                        <img src="assets/img/big-size.png" width="75" class="d-block mt-1" alt="mashi">
+                    </div>
+                    <div class="col-md-21">
+                        <article>
+
+                            <p class="m-0">
+                                MASHITOOLS is a leading travel comparison site that lets you find cheap flights, hotels,
+                                car rentals and vacation package online. Whether you're traveling for fun, business,
+                                adventure, or relaxation, your ideal trip is simply a click away! You can compare
+                                airline fares, hotel rates, and car rentals from all the top internet travel sites in
+                                one location. Finding cheap flights has never been easier. Save time, save money;
+                                there's no need to visit website after website to find cheap airline ticket or the best
+                                deals. It's all here for you in one location.
+                            </p>
+
+                            <div class="py-1 text-center mt-3">
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Cheap Flights</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Cheap Hotels</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Cheap Rental Cars</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Save on Vacation</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">About Us</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Terms & Conditions</a>
+                                <a href="#" class="d-inline-block fw-500 p-2 underline">Privacy Policy</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/libs/jquery-3.5.1.min.js"></script>
+    <script src="./js/libs/jquery-ui.min.js"></script>
+    <script src="./js/libs/bootstrap-slider.min.js"></script>
+    <script src="js/flights.js"></script>
+</body>
+
+</html>
