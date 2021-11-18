@@ -235,6 +235,7 @@
 
 .slider .tooltip.bs-tooltip-top {
   margin-top: -44px;
+  display: none;
 }
 
 .slider .tooltip.bs-tooltip-bottom {
